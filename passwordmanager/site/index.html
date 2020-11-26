@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Password Manager Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Password Manager";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Password Manager Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Password Manager</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-of-dependencies">Installation of Dependencies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#for-installing-nodejs">For Installing NodeJS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#macos">MacOS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#for-installing-python">For Installing Python</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#macos_1">MacOS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#linux_1">Linux</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#windows_1">Windows</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#for-installing-the-npm-packages">For Installing the NPM Packages</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#macos-windows-and-linux">MacOS, Windows and Linux</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-password-manager">Install Password Manager</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-password-manager">Using Password Manager</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#to-add-a-password">To add a password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#to-delete-a-password">To delete a password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#to-delete-all-passwords">To delete all passwords</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#to-list-all-passwords">To list all passwords</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#to-read-a-password">To read a password</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Password Manager Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Password Manager</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="password-manager">Password Manager</h1>
+<p>An attempt at making a Password Manager in Node.js</p>
+<p>Warning: I am making this just for fun! This is  <strong>NOT</strong>  Secure</p>
+<h2 id="dependencies">Dependencies</h2>
+<pre><code> - NodeJS (bundled)
+ - Python 3.9.0 (bundled)
+ - NPM Packages:
+   - Inquirer
+   - NodeShell
+   - shelljs
+   - echo
+   - node-echo
+</code></pre>
+<h2 id="installation-of-dependencies">Installation of Dependencies</h2>
+<blockquote>
+<p>You can either manually install, or install using the quick installers provided in the installer folder :)
+Run the quick_install_dependencies first, and then npm_install after :)</p>
+</blockquote>
+<h2 id="for-installing-nodejs">For Installing NodeJS</h2>
+<h3 id="macos">MacOS</h3>
+<ul>
+<li>Run the provided installer</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>Open <code>bash</code> or <code>terminal</code></li>
+<li>Run the command <code>sudo apt install nodejs</code></li>
+</ul>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>Run the provided installer</li>
+</ul>
+<h2 id="for-installing-python">For Installing Python</h2>
+<h3 id="macos_1">MacOS</h3>
+<ul>
+<li>Run the provided installer</li>
+</ul>
+<h3 id="linux_1">Linux</h3>
+<ul>
+<li>Open <code>bash</code>or <code>terminal</code></li>
+<li>Run the command <code>sudo apt install pythonpy</code></li>
+</ul>
+<h3 id="windows_1">Windows</h3>
+<ul>
+<li>Run the provided installer</li>
+</ul>
+<h2 id="for-installing-the-npm-packages">For Installing the NPM Packages</h2>
+<h3 id="macos-windows-and-linux">MacOS, Windows and Linux</h3>
+<ul>
+<li>MacOs Users — Open the terminal, Linux users — Open bash, Windows users — Open Powershell (Win 10) or CMD (Win 7)</li>
+<li>Run the following commands to install all dependencies</li>
+</ul>
+<p><code>npm install -g inquirer</code>
+  then
+  <code>npm install -g shelljs</code>
+  then
+  <code>npm install -g nodeshell</code>
+  then
+  <code>npm install -g node-echo</code>
+  then
+  <code>npm install -g echo</code>
+<br></p>
+<h2 id="install-password-manager">Install Password Manager</h2>
+<p>Copy the entire directory for your specific operating system and paste it into any directory which does not require elevated privellages and does not have any spaces.
+ <br>
+ Windows Example: Install it in D:\Password_Manager instead of C:\Program Files (x86)\Password Manager</p>
+<blockquote>
+<p>Mac Example: Install it in ~/Password_Manager instead of /Applications</p>
+<p>Linux Examples: It is best to install it in ~/Password_Manager</p>
+</blockquote>
+<p>Add the install directory to your <code>PATH Environment Variable</code></p>
+<h2 id="using-password-manager">Using Password Manager</h2>
+<h3 id="to-add-a-password">To add a password</h3>
+<ol>
+<li>Open <code>terminal</code> or <code>bash</code> or <code>powershell</code> or <code>cmd</code></li>
+<li>If you have added it to your PATH, run <code>node addPass.js</code></li>
+<li>If you have not, <code>cd</code> to your install directory and then run <code>node addPass.js</code></li>
+</ol>
+<h3 id="to-delete-a-password">To delete a password</h3>
+<ol>
+<li>Open <code>terminal</code> or <code>bash</code> or <code>powershell</code> or <code>cmd</code></li>
+<li>Added to path — <code>node dellSPASS.js</code></li>
+<li>Not added to path — <code>cd</code> to install directory then <code>node dellSPASS.js</code></li>
+</ol>
+<h3 id="to-delete-all-passwords">To delete all passwords</h3>
+<ol>
+<li>Open <code>terminal</code> or <code>bash</code> or <code>powershell</code> or <code>cmd</code></li>
+<li>Added to path — <code>node dellAPASS.js</code></li>
+<li>Not added to path — <code>cd</code> to install directory then <code>node dellAPASS.js</code></li>
+</ol>
+<h3 id="to-list-all-passwords">To list all passwords</h3>
+<ol>
+<li>Open <code>terminal</code> or <code>bash</code> or <code>powershell</code> or <code>cmd</code></li>
+<li>Added to path — <code>node listPass.js</code></li>
+<li>Not added to path — <code>cd</code> to install directory then <code>node listPass.js</code></li>
+</ol>
+<h3 id="to-read-a-password">To read a password</h3>
+<ol>
+<li>Open <code>terminal</code> or <code>bash</code> or <code>powershell</code> or <code>cmd</code></li>
+<li>Added to path — <code>node readPass.js</code></li>
+<li>Not added to path — <code>cd</code> to install directory then <code>node readPass.js</code></li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2020-11-26 12:33:38.087650+00:00
+-->
